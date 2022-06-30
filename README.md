@@ -13,7 +13,7 @@ const router=createRouter([handlers...]);
 
 // Pass a port and the router you created to startServer.
 
-const server=startServer(port,router);
+startServer(port,router);
 
 // Voila! your server is ready to serve.
 
