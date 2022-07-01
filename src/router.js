@@ -10,7 +10,7 @@ const createNext = handlers => {
   return callNextHandler;
 };
 
-const createRouter = (...handlers) => {
+const createRouter = (handlers) => {
   return (req, res) => {
     const next = createNext(handlers);
     next(req, res);
