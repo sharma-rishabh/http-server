@@ -34,7 +34,7 @@ want to pass it to the next handler.
 ```
 # Available Handlers
 
-```
+``` js
 const { addTimeStamp } = require('http-server'); 
 // adds a timeStamp to each request
 
