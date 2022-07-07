@@ -32,3 +32,26 @@ want to pass it to the next handler.
 */
 
 ```
+# Available Handlers
+
+```
+const { addTimeStamp } = require('http-server'); 
+// adds a timeStamp to each request
+
+const { logRequest } = require('http-server'); 
+// logs each request to console.
+
+const { parseCookies } = require('http-server');
+// parse the cookies and stores in request.
+
+const { createInjectSession } = require('http-server'); 
+// Injects the session related to cookies in request. 
+createInjectSession(sessions) // pass ongoing sessions.
+
+const { injectBody } = require('./src/handlers/injectBody.js');
+// Reads and injects to body in request.
+
+const { parseBodyUrl } = require('http-server');
+// parses the body in request and stores it as bodyUrlParams if it is urlEncoded
+```
+
