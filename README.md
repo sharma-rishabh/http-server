@@ -58,5 +58,8 @@ const { createStaticFileHandler } = require('http-server');
 // can server a static file.
 createStaticFileHandler(dirName) 
 // Pass the directory name you want to serve content from
+
+const {notFoundHandler}=require('http-server');
+// runs if no other handler can handle the request.
 ```
 

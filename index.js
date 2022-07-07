@@ -7,6 +7,7 @@ const { createInjectSession } = require('./src/handlers/createInjectSession.js')
 const { injectBody } = require('./src/handlers/injectBody.js');
 const { parseBodyUrl } = require('./src/handlers/parseBodyUrl.js');
 const { logRequest } = require('./src/handlers/logRequestHandler.js');
+const { notFoundHandler } = require('./src/notFoundHandler.js');
 
 module.exports = {
   startServer,
@@ -17,5 +18,6 @@ module.exports = {
   createInjectSession,
   injectBody,
   parseBodyUrl,
-  logRequest
+  logRequest,
+  notFoundHandler
 };
