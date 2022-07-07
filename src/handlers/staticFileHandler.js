@@ -15,7 +15,7 @@ const mimeTypes = (fileName) => {
   return types[extension];
 }
 
-const createStaticFileServer = (dirName) => (req, res, next) => {
+const createStaticFileHandler = (dirName) => (req, res, next) => {
   const filePath = dirName + req.url.pathname;
   console.log(filePath);
   fs.readFile(filePath, (err, data) => {
@@ -29,4 +29,4 @@ const createStaticFileServer = (dirName) => (req, res, next) => {
   })
 };
 
-module.exports = { createStaticFileServer };
+module.exports = { createStaticFileHandler };

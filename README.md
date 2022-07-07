@@ -48,10 +48,15 @@ const { createInjectSession } = require('http-server');
 // Injects the session related to cookies in request. 
 createInjectSession(sessions) // pass ongoing sessions.
 
-const { injectBody } = require('./src/handlers/injectBody.js');
+const { injectBody } = require('http-server');
 // Reads and injects to body in request.
 
 const { parseBodyUrl } = require('http-server');
 // parses the body in request and stores it as bodyUrlParams if it is urlEncoded
+
+const { createStaticFileHandler } = require('http-server');
+// can server a static file.
+createStaticFileHandler(dirName) 
+// Pass the directory name you want to serve content from
 ```
 
